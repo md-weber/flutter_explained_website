@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_explained_website/screens/home_screen.dart';
+import 'package:flutter_explained_website/screens/home_screen/home_screen.dart';
+import 'package:storyblok_client/storyblok_client.dart';
 
-void main() => runApp(MyApp());
+Future<void> main() async {
+  runApp(MyApp());
+}
 
 class MyApp extends StatelessWidget {
   // This widget is the root of your application.
