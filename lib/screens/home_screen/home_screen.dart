@@ -26,7 +26,6 @@ class HomeScreen extends StatelessWidget {
                         textAlign: TextAlign.center,
                       ),
                       InterviewRow(),
-
                       Padding(
                         padding: const EdgeInsets.all(32.0),
                         child: FrankLoadingSpinner(
