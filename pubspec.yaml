@@ -16,8 +16,6 @@ dependencies:
   flutter_icons: ^1.0.0+1
   url_launcher: ^5.4.2
   json_annotation: ^3.0.1
-  storyblok_client:
-    path: "../storyblok_client"
 
 dev_dependencies:
   flutter_test:

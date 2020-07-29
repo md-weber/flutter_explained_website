@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_explained_website/screens/home_screen/home_screen.dart';
-import 'package:storyblok_client/storyblok_client.dart';
+import 'package:flutter_explained_website/ui/screens/home_screen.dart';
 
 Future<void> main() async {
   runApp(MyApp());
