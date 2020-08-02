@@ -7,18 +7,20 @@ const String logoImagePath = kIsWeb
     ? 'assets/assets/images/flutter_explained_logo.png'
     : 'assets/images/flutter_explained_logo.png';
 
+const navBarBoxDecoration = BoxDecoration(color: Color(0xFFFFFFFF), boxShadow: [
+  BoxShadow(
+    color: Color(0x28000000),
+    blurRadius: 6,
+    offset: Offset(0, 3),
+  )
+]);
+
 class NavigationBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
       height: 80,
-      decoration: BoxDecoration(color: const Color(0xFFFFFFFF), boxShadow: [
-        BoxShadow(
-          color: const Color(0x40000000),
-          blurRadius: 6,
-          offset: Offset(0, 3),
-        )
-      ]),
+      decoration: navBarBoxDecoration,
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.center,
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
