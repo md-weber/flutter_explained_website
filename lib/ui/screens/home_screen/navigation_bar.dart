@@ -9,7 +9,7 @@ const String logoImagePath = kIsWeb
 
 const navBarBoxDecoration = BoxDecoration(color: Color(0xFFFFFFFF), boxShadow: [
   BoxShadow(
-    color: Color(0x28000000),
+    color: Color(0x14000000),
     blurRadius: 6,
     offset: Offset(0, 3),
   )
@@ -32,11 +32,14 @@ class NavigationBar extends StatelessWidget {
                 height: 80,
                 width: 80,
               ),
-              Text(
-                "Flutter Explained",
-                style: GoogleFonts.passionOne(
-                  fontSize: 36,
-                  color: const Color(0xFF707070),
+              Padding(
+                padding: const EdgeInsets.only(top: 8.0),
+                child: Text(
+                  "Flutter Explained",
+                  style: GoogleFonts.passionOne(
+                    fontSize: 36,
+                    color: const Color(0xFF707070),
+                  ),
                 ),
               ),
             ],
