@@ -1,7 +1,5 @@
-import 'package:flutter/material.dart';
+import "package:flutter/material.dart";
 
-class WebsiteTheme {
-  static ThemeData lightTheme = ThemeData.light().copyWith(
-    textTheme: ThemeData.light().textTheme.copyWith(),
-  );
-}
+ThemeData lightTheme = ThemeData.light().copyWith(
+  textTheme: ThemeData.light().textTheme.copyWith(),
+);

@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+import "package:flutter/material.dart";
 
 const largeScreenBreakPoint = 1280;
 const smallScreenBreakPoint = 680;
@@ -12,17 +12,17 @@ class ResponsiveWidget extends StatelessWidget {
       {Key key, this.smallScreen, this.tabletScreen, this.largeScreen})
       : super(key: key);
 
-  static bool isLargeScreen(context) {
+  static bool isLargeScreen(BuildContext context) {
     return MediaQuery.of(context).size.width > largeScreenBreakPoint;
   }
 
-  static bool isTableScreen(context) {
-    var screenWidth = MediaQuery.of(context).size.width;
+  static bool isTableScreen(BuildContext context) {
+    final double screenWidth = MediaQuery.of(context).size.width;
     return screenWidth < largeScreenBreakPoint &&
         screenWidth > smallScreenBreakPoint;
   }
 
-  static bool isMobileScreen(context) {
+  static bool isMobileScreen(BuildContext context) {
     return MediaQuery.of(context).size.width < smallScreenBreakPoint;
   }
 
