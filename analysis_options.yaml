@@ -3,4 +3,4 @@ include: package:lint/analysis_options.yaml
 linter:
   rules:
     prefer_single_quotes: false
-    prefer_double_quotes: true
+    prefer_double_quotes: false
