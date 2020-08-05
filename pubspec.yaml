@@ -16,14 +16,19 @@ dependencies:
   flutter_icons: ^1.0.0+1
   url_launcher: ^5.4.2
   json_annotation: ^3.0.1
-  storyblok_client:
-    path: "../storyblok_client"
+  flutter_svg: ^0.18.0
+  google_fonts: ^1.1.0
+  animated_text_kit: ^2.2.0
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
   build_runner: ^1.8.0
   json_serializable: ^3.2.5
+  lint: ^1.0.0
 
 flutter:
   uses-material-design: true
+
+  assets:
+    - assets/images/
