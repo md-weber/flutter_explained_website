@@ -13,22 +13,12 @@ class HomeScreen extends StatelessWidget {
       body: Column(
         children: [
           NavigationBar(),
-          Expanded(
-            child: MaxWidthContainer(
-              child: ResponsiveWidget(
-                mobileBody: Column(
-                  children: [
-                    HomeContent(),
-                  ],
-                ),
-                desktopBody: Column(
-                  children: [
-                    HomeContent(),
-                  ],
-                ),
-              ),
+          MaxWidthContainer(
+            child: ResponsiveWidget(
+              mobileBody: HomeContent(),
             ),
           ),
+          const Spacer(),
           MaxWidthContainer(child: Footer()),
         ],
       ),
