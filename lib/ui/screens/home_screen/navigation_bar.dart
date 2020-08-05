@@ -39,7 +39,7 @@ class NavigationBar extends StatelessWidget {
                   "Flutter Explained",
                   style: GoogleFonts.passionOne(
                     fontSize: 36,
-                    color: const Color(0xFF707070),
+                    color: const Color(0xFF000000),
                   ),
                 ),
               ),
