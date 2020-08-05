@@ -4,7 +4,7 @@ import "package:google_fonts/google_fonts.dart";
 
 // TODO: Implement if svg for web is there: https://github.com/dnfield/flutter_svg/issues/173
 const String logoImagePath = kIsWeb
-    ? "assets/assets/images/flutter_explained_logo.png"
+    ? "assets/images/flutter_explained_logo.png"
     : "assets/images/flutter_explained_logo.png";
 
 const navBarBoxDecoration = BoxDecoration(color: Color(0xFFFFFFFF), boxShadow: [
@@ -25,25 +25,28 @@ class NavigationBar extends StatelessWidget {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          Row(
-            children: [
-              Image.asset(
-                logoImagePath,
-                semanticLabel: "Flutter Explained Logo",
-                height: 80,
-                width: 80,
-              ),
-              Padding(
-                padding: const EdgeInsets.only(top: 8.0),
-                child: Text(
-                  "Flutter Explained",
-                  style: GoogleFonts.passionOne(
-                    fontSize: 36,
-                    color: const Color(0xFF000000),
+          Padding(
+            padding: const EdgeInsets.only(left: 70.0),
+            child: Row(
+              children: [
+                Image.asset(
+                  logoImagePath,
+                  semanticLabel: "Flutter Explained Logo",
+                  height: 80,
+                  width: 80,
+                ),
+                Padding(
+                  padding: const EdgeInsets.only(top: 8.0),
+                  child: Text(
+                    "Flutter Explained",
+                    style: GoogleFonts.passionOne(
+                      fontSize: 36,
+                      color: const Color(0xFF000000),
+                    ),
                   ),
                 ),
-              ),
-            ],
+              ],
+            ),
           )
         ],
       ),
