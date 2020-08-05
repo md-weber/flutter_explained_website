@@ -9,7 +9,7 @@ class HomeScreen extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.white,
       body: ResponsiveWidget(
-        largeScreen: Column(
+        mobileBody: Column(
           children: [
             NavigationBar(),
             HomeContent(),
