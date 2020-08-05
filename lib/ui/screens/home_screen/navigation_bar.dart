@@ -1,5 +1,6 @@
 import "package:flutter/foundation.dart";
 import "package:flutter/material.dart";
+import 'package:flutter_explained_website/ui/widgets/max_width_container.dart';
 import "package:google_fonts/google_fonts.dart";
 
 // TODO: Implement if svg for web is there: https://github.com/dnfield/flutter_svg/issues/173
@@ -22,33 +23,27 @@ class NavigationBar extends StatelessWidget {
       margin: const EdgeInsets.only(bottom: 8),
       height: 80,
       decoration: navBarBoxDecoration,
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        children: [
-          Padding(
-            padding: const EdgeInsets.only(left: 70.0),
-            child: Row(
-              children: [
-                Image.asset(
-                  logoImagePath,
-                  semanticLabel: "Flutter Explained Logo",
-                  height: 80,
-                  width: 80,
-                ),
-                Padding(
-                  padding: const EdgeInsets.only(top: 8.0),
-                  child: Text(
-                    "Flutter Explained",
-                    style: GoogleFonts.passionOne(
-                      fontSize: 36,
-                      color: const Color(0xFF000000),
-                    ),
-                  ),
-                ),
-              ],
+      child: MaxWidthContainer(
+        child: Row(
+          children: [
+            Image.asset(
+              logoImagePath,
+              semanticLabel: "Flutter Explained Logo",
+              height: 80,
+              width: 80,
             ),
-          )
-        ],
+            Padding(
+              padding: const EdgeInsets.only(top: 8.0),
+              child: Text(
+                "Flutter Explained",
+                style: GoogleFonts.passionOne(
+                  fontSize: 36,
+                  color: const Color(0xFF000000),
+                ),
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }

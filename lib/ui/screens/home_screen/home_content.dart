@@ -15,7 +15,6 @@ class HomeContent extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       decoration: kBackgroundDecoration,
-      width: double.infinity,
       child: Row(
         children: [
           Expanded(flex: 6, child: Jumbotron()),

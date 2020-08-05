@@ -21,7 +21,8 @@ class ResponsiveWidget extends StatelessWidget {
       builder: (context, dimens) {
         if (dimens.maxWidth < kTabletBreakpoint) {
           return mobileBody;
-        } else if (dimens.maxWidth >= kTabletBreakpoint && dimens.maxWidth < kDesktopBreakpoint) {
+        } else if (dimens.maxWidth >= kTabletBreakpoint &&
+            dimens.maxWidth < kDesktopBreakpoint) {
           return tabletBody ?? mobileBody;
         } else {
           return desktopBody ?? mobileBody;

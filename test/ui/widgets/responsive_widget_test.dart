@@ -9,7 +9,9 @@ void main() {
   const String _desktopText = "desktop";
 
   group('ResponsiveWidgetTest -', () {
-    testWidgets('Given mobile body When ResponsiveWidget is used Then contain mobile Text widget', (tester) async {
+    testWidgets(
+        'Given mobile body When ResponsiveWidget is used Then contain mobile Text widget',
+        (tester) async {
       // ASSEMBLE
       tester.binding.window.physicalSizeTestValue = const Size(600, 600);
       tester.binding.window.devicePixelRatioTestValue = 1.0;
@@ -32,9 +34,12 @@ void main() {
       expect(textFinder, findsOneWidget);
     });
 
-    testWidgets('Given tablet body When ResponsiveWidget is used Then contain tablet Text widget', (tester) async {
+    testWidgets(
+        'Given tablet body When ResponsiveWidget is used Then contain tablet Text widget',
+        (tester) async {
       // ASSEMBLE
-      tester.binding.window.physicalSizeTestValue = const Size(kTabletBreakpoint, 600);
+      tester.binding.window.physicalSizeTestValue =
+          const Size(kTabletBreakpoint, 600);
       tester.binding.window.devicePixelRatioTestValue = 1.0;
       addTearDown(tester.binding.window.clearPhysicalSizeTestValue);
 
@@ -55,9 +60,12 @@ void main() {
       expect(textFinder, findsOneWidget);
     });
 
-    testWidgets('Given desktop body When ResponsiveWidget is used Then contain desktop Text widget', (tester) async {
+    testWidgets(
+        'Given desktop body When ResponsiveWidget is used Then contain desktop Text widget',
+        (tester) async {
       // ASSEMBLE
-      tester.binding.window.physicalSizeTestValue = const Size(kDesktopBreakpoint, 600);
+      tester.binding.window.physicalSizeTestValue =
+          const Size(kDesktopBreakpoint, 600);
       tester.binding.window.devicePixelRatioTestValue = 1.0;
       addTearDown(tester.binding.window.clearPhysicalSizeTestValue);
 
