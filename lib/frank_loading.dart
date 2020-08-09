@@ -26,20 +26,20 @@ class _FrankLoadingSpinnerState extends State<FrankLoadingSpinner>
   }
 
   Tween<Offset> firstTween = Tween<Offset>(
-    begin: Offset(0, 0),
-    end: Offset(0, -30),
+    begin: const Offset(0, 0),
+    end: const Offset(0, -30),
   );
 
   Tween<Offset> secondTween = Tween<Offset>(
-    begin: Offset(0, 0),
-    end: Offset(0, -10),
+    begin: const Offset(0, 0),
+    end: const Offset(0, -10),
   );
 
   Tween<Offset> thirdTween = Tween<Offset>(
-    begin: Offset(0, 0),
-    end: Offset(0, -15),
+    begin: const Offset(0, 0),
+    end: const Offset(0, -15),
   );
-  var mainAxisAlignment = MainAxisAlignment.start;
+  MainAxisAlignment mainAxisAlignment = MainAxisAlignment.start;
   int counter = 0;
 
   @override
@@ -47,24 +47,24 @@ class _FrankLoadingSpinnerState extends State<FrankLoadingSpinner>
     super.initState();
     firstDotAnimationController = AnimationController(
       vsync: this,
-      duration: Duration(milliseconds: 300),
+      duration: const Duration(milliseconds: 300),
     );
 
     secondDotAnimationController = AnimationController(
       vsync: this,
-      duration: Duration(milliseconds: 300),
+      duration: const Duration(milliseconds: 300),
     );
 
     thirdDotAnimationController = AnimationController(
       vsync: this,
-      duration: Duration(milliseconds: 300),
+      duration: const Duration(milliseconds: 300),
     );
 
     firstDotAnimationController.repeat(reverse: true);
 
-    Future.delayed(Duration(milliseconds: 200)).then((value) {
+    Future.delayed(const Duration(milliseconds: 200)).then((value) {
       secondDotAnimationController.repeat(reverse: true);
-      Future.delayed(Duration(milliseconds: 100)).then((value) {
+      Future.delayed(const Duration(milliseconds: 100)).then((value) {
         thirdDotAnimationController.repeat(reverse: true);
       });
     });
@@ -95,7 +95,7 @@ class _FrankLoadingSpinnerState extends State<FrankLoadingSpinner>
           child: Container(
             height: 20,
             width: 20,
-            margin: EdgeInsets.all(2.0),
+            margin: const EdgeInsets.all(2.0),
             decoration: BoxDecoration(
               shape: BoxShape.circle,
               color: widget.bodyColor,
@@ -107,7 +107,7 @@ class _FrankLoadingSpinnerState extends State<FrankLoadingSpinner>
           child: Container(
             height: 80,
             width: 80,
-            margin: EdgeInsets.all(2.0),
+            margin: const EdgeInsets.all(2.0),
             decoration: BoxDecoration(
               shape: BoxShape.circle,
               color: widget.bodyColor,
@@ -120,7 +120,7 @@ class _FrankLoadingSpinnerState extends State<FrankLoadingSpinner>
                   child: Container(
                     height: 10,
                     width: 10,
-                    decoration: BoxDecoration(
+                    decoration: const BoxDecoration(
                       color: Colors.white,
                       shape: BoxShape.circle,
                     ),
@@ -131,7 +131,7 @@ class _FrankLoadingSpinnerState extends State<FrankLoadingSpinner>
                   child: Container(
                     height: 5,
                     width: 5,
-                    decoration: BoxDecoration(
+                    decoration: const BoxDecoration(
                       color: Colors.white,
                       shape: BoxShape.circle,
                     ),
@@ -146,7 +146,7 @@ class _FrankLoadingSpinnerState extends State<FrankLoadingSpinner>
           child: Container(
             height: 20,
             width: 20,
-            margin: EdgeInsets.all(2.0),
+            margin: const EdgeInsets.all(2.0),
             decoration: BoxDecoration(
               shape: BoxShape.circle,
               color: widget.bodyColor,
