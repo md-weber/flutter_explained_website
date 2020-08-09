@@ -26,7 +26,8 @@ void main() {
       expect(size.width, 1200);
     });
 
-    testWidgets("should only allow a certain amount of width", (tester) async {
+    testWidgets("should take the full screen width as the size",
+        (tester) async {
       // Assemble
       tester.binding.window.physicalSizeTestValue = const Size(800, 600);
       tester.binding.window.devicePixelRatioTestValue = 1.0;
