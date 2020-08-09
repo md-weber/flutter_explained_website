@@ -23,25 +23,31 @@ class NavigationBar extends StatelessWidget {
       height: 80,
       decoration: navBarBoxDecoration,
       child: MaxWidthContainer(
-        child: Row(
-          children: [
-            Image.asset(
-              logoImagePath,
-              semanticLabel: "Flutter Explained Logo",
-              height: 80,
-              width: 80,
-            ),
-            Padding(
-              padding: const EdgeInsets.only(top: 8.0),
-              child: Text(
-                "Flutter Explained",
-                style: GoogleFonts.passionOne(
-                  fontSize: 36,
-                  color: const Color(0xFF000000),
+        child: SizedBox(
+          width: double.infinity,
+          child: FittedBox(
+            alignment: Alignment.centerLeft,
+            child: Row(
+              children: [
+                Image.asset(
+                  logoImagePath,
+                  semanticLabel: "Flutter Explained Logo",
+                  height: 80,
+                  width: 80,
                 ),
-              ),
+                Padding(
+                  padding: const EdgeInsets.only(top: 8.0),
+                  child: Text(
+                    "Flutter Explained",
+                    style: GoogleFonts.passionOne(
+                      fontSize: 36,
+                      color: const Color(0xFF000000),
+                    ),
+                  ),
+                ),
+              ],
             ),
-          ],
+          ),
         ),
       ),
     );

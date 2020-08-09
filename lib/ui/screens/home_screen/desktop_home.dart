@@ -10,7 +10,7 @@ const kBackgroundDecoration = BoxDecoration(
   ),
 );
 
-class HomeContent extends StatelessWidget {
+class DesktopHome extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
