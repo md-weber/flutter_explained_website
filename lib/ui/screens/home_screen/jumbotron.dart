@@ -5,12 +5,13 @@ import 'package:google_fonts/google_fonts.dart';
 class Jumbotron extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        // TODO: Animated Text Kit
-        FittedBox(
-          child: Row(
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 16.0),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          FittedBox(
+              child: Row(
             children: [
               Text(
                 "Flutter ",
@@ -22,28 +23,28 @@ class Jumbotron extends StatelessWidget {
                 repeatForever: true,
               )
             ],
-          ),
-        ),
-        Text(
-          "We can help you to create customized mobile applications for your business or integrate Flutter into your existing app.",
-          style: GoogleFonts.montserrat(
-            fontSize: 16.0,
-          ),
-        ),
-        const SizedBox(height: 16),
-        FlatButton(
-          onPressed: () {
-            // TODO: Implement contact us button
-          },
-          color: const Color(0xFF0168AB),
-          child: Text(
-            "Contact us",
+          )),
+          Text(
+            "We can help you to create customized mobile applications for your business or integrate Flutter into your existing app.",
             style: GoogleFonts.montserrat(
-              color: const Color(0xFFFFFFFF),
+              fontSize: 16.0,
             ),
           ),
-        )
-      ],
+          const SizedBox(height: 16),
+          FlatButton(
+            onPressed: () {
+              // TODO: Implement contact us button
+            },
+            color: const Color(0xFF0168AB),
+            child: Text(
+              "Contact us",
+              style: GoogleFonts.montserrat(
+                color: const Color(0xFFFFFFFF),
+              ),
+            ),
+          )
+        ],
+      ),
     );
   }
 }
