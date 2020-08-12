@@ -19,6 +19,7 @@ dependencies:
   flutter_svg: ^0.18.0
   google_fonts: ^1.1.0
   animated_text_kit: ^2.2.0
+  lottie: ^0.5.1
 
 dev_dependencies:
   flutter_test:
@@ -32,3 +33,4 @@ flutter:
 
   assets:
     - assets/images/
+    - assets/lottie/
