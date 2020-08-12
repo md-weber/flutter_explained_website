@@ -1,5 +1,6 @@
 import 'package:animated_text_kit/animated_text_kit.dart';
 import "package:flutter/material.dart";
+import 'package:flutter_explained_website/utils/size_config.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class Jumbotron extends StatelessWidget {
@@ -10,20 +11,21 @@ class Jumbotron extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          FittedBox(
-              child: Row(
+          Row(
             children: [
               Text(
                 "Flutter ",
-                style: GoogleFonts.passionOne(fontSize: 48.0),
+                style: GoogleFonts.passionOne(
+                    fontSize: 6 * SizeConfig.fontSizeMultiplier),
               ),
               RotateAnimatedTextKit(
                 text: const ["Developer", "YouTuber", "Enthusiast"],
-                textStyle: GoogleFonts.passionOne(fontSize: 48.0),
+                textStyle: GoogleFonts.passionOne(
+                    fontSize: 6 * SizeConfig.fontSizeMultiplier),
                 repeatForever: true,
               )
             ],
-          )),
+          ),
           Text(
             "We can help you to create customized mobile applications for your business or integrate Flutter into your existing app.",
             style: GoogleFonts.montserrat(
