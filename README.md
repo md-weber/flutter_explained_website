@@ -18,4 +18,5 @@ For help getting started with Flutter, view our
 samples, guidance on mobile development, and a full API reference.
 
 ## Special Thanks
-To the undraw team [Undraw.co](https://undraw.co)
+- To the undraw team [Undraw.co](https://undraw.co)
+- To the [creator](https://lottiefiles.com/MiLushin) of the Lottie File
