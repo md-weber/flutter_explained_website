@@ -1,4 +1,5 @@
 import "package:flutter/material.dart";
+import 'package:flutter_explained_website/utils/size_config.dart';
 import 'package:lottie/lottie.dart';
 
 class HeroImage extends StatelessWidget {
@@ -8,8 +9,7 @@ class HeroImage extends StatelessWidget {
     return SizedBox(
       child: LottieBuilder.asset(
         "assets/lottie/mobile_homescreen.json",
-        width: 500,
-        height: 500,
+        height: 48 * SizeConfig.heightMultiplier,
       ),
     );
   }
