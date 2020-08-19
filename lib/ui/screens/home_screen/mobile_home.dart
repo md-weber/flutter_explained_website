@@ -5,11 +5,10 @@ import 'package:flutter_explained_website/ui/screens/home_screen/jumbotron.dart'
 class MobileHome extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
+    return ListView(
       children: [
-        Flexible(flex: 6, child: HeroImage()),
-        Expanded(flex: 8, child: Jumbotron()),
+        HeroImage(),
+        Jumbotron(),
       ],
     );
   }
