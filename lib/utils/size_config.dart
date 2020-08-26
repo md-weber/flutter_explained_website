@@ -25,14 +25,14 @@ class SizeConfig {
         isMobilePortrait = true;
       }
     } else {
-      _screenWidth = constraints.maxHeight;
-      _screenHeight = constraints.maxWidth;
+      _screenWidth = constraints.maxWidth;
+      _screenHeight = constraints.maxHeight;
       isPortrait = false;
       isMobilePortrait = false;
     }
     _blockWidth = _screenWidth / 100;
     _blockHeight = _screenHeight / 100;
-    fontSizeMultiplier = _blockWidth;
+    fontSizeMultiplier = _blockHeight;
     imageSizeMultiplier = _blockWidth;
     textMultiplier = _blockHeight;
     heightMultiplier = _blockHeight;

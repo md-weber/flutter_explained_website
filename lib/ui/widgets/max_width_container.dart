@@ -10,10 +10,8 @@ class MaxWidthContainer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Center(
-      child: ConstrainedBox(
-        constraints: BoxConstraints(
-          maxWidth: maxWidth,
-        ),
+      child: SizedBox(
+        width: maxWidth,
         child: child,
       ),
     );
