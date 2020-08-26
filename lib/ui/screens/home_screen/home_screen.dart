@@ -4,7 +4,6 @@ import 'package:flutter_explained_website/ui/screens/home_screen/mobile_home.dar
 import "package:flutter_explained_website/ui/screens/home_screen/navigation_bar.dart";
 import 'package:flutter_explained_website/ui/widgets/max_width_container.dart';
 import "package:flutter_explained_website/ui/widgets/responsive_widget.dart";
-import 'package:flutter_explained_website/widgets/footer.dart';
 
 class HomeScreen extends StatelessWidget {
   @override
@@ -19,7 +18,6 @@ class HomeScreen extends StatelessWidget {
               desktopBody: MaxWidthContainer(child: DesktopHome()),
             ),
           ),
-          MaxWidthContainer(child: Footer()),
         ],
       ),
     );
