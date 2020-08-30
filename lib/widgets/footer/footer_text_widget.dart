@@ -23,10 +23,14 @@ class FooterTextWidget extends StatelessWidget {
       },
       child: ValueListenableBuilder<bool>(
         valueListenable: isHoveredNotifier,
-        builder: (context, bool isHovered, child) {
-          return isHovered
-              ? Text(text, style: hoverStyle ?? kHoverTextStyle)
-              : Text(text, style: style ?? kFooterTextStyle);
+        builder: (context, isHovered, child) {
+          return AnimatedDefaultTextStyle(
+            duration: const Duration(milliseconds: 300),
+            style: isHovered
+                ? hoverStyle ?? kHoverTextStyle
+                : style ?? kFooterTextStyle,
+            child: Text(text),
+          );
         },
       ),
     );

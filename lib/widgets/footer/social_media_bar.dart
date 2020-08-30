@@ -13,7 +13,7 @@ class SocialMediaRow extends StatelessWidget {
         constraints: const BoxConstraints(maxWidth: 320),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-          children: <Widget>[
+          children: const <Widget>[
             SocialMediaButton(
               url: kYoutubeUrl,
               icon: Feather.youtube,
@@ -41,31 +41,70 @@ class SocialMediaRow extends StatelessWidget {
   }
 }
 
-class SocialMediaButton extends StatelessWidget {
-  final ValueNotifier<bool> hovered = ValueNotifier(false);
+class SocialMediaButton extends StatefulWidget {
   final String url;
   final IconData icon;
   final Color hoverColor;
 
-  SocialMediaButton({
+  const SocialMediaButton({
     @required this.url,
     @required this.icon,
     this.hoverColor = kHoverColor,
   });
 
   @override
+  _SocialMediaButtonState createState() => _SocialMediaButtonState();
+}
+
+class _SocialMediaButtonState extends State<SocialMediaButton>
+    with SingleTickerProviderStateMixin {
+  final ValueNotifier<bool> hovered = ValueNotifier(false);
+
+  AnimationController _animationController;
+  ColorTween _colorTween;
+  Animation<Color> _animation;
+
+  @override
+  void initState() {
+    super.initState();
+    _animationController = AnimationController(
+      vsync: this,
+      duration: const Duration(milliseconds: 200),
+    );
+
+    _colorTween = ColorTween(
+      begin: kFooterTextColor,
+      end: widget.hoverColor ?? kHoverColor,
+    );
+
+    _animation = _colorTween.animate(_animationController)
+      ..addListener(() {
+        setState(() {});
+      });
+  }
+
+  @override
   Widget build(BuildContext context) {
     return InkWell(
-      onHover: (isHovered) => hovered.value = isHovered,
+      onHover: (isHovered) {
+        hovered.value = isHovered;
+        if (isHovered) {
+          _animationController.forward();
+        } else {
+          _animationController.reverse();
+        }
+      },
       onTap: () {
-        launchURL(url);
+        launchURL(widget.url);
       },
       child: ValueListenableBuilder<bool>(
         valueListenable: hovered,
-        builder: (context, isHovered, child) => Icon(
-          icon,
-          color: isHovered ? hoverColor : kFooterTextColor,
-        ),
+        builder: (context, isHovered, child) {
+          return Icon(
+            widget.icon,
+            color: _animation.value,
+          );
+        },
       ),
     );
   }
