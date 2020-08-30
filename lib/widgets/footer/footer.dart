@@ -25,7 +25,7 @@ class Footer extends StatelessWidget {
       color: kFooterBackgroundColor,
       child: MaxWidthContainer(
         child: Padding(
-          padding: const EdgeInsets.only(bottom: 32.0, top: 16.0),
+          padding: const EdgeInsets.only(bottom: 32.0, top: 32.0),
           child: Column(
             children: [
               SocialMediaRow(),
