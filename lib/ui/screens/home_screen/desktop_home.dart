@@ -3,7 +3,7 @@ import 'package:flutter_explained_website/ui/screens/home_screen/hero_image.dart
 import 'package:flutter_explained_website/ui/screens/home_screen/jumbotron.dart';
 import 'package:flutter_explained_website/ui/widgets/max_width_container.dart';
 import 'package:flutter_explained_website/utils/size_config.dart';
-import 'package:flutter_explained_website/widgets/footer.dart';
+import 'package:flutter_explained_website/widgets/footer/footer.dart';
 
 const kBackgroundDecoration = BoxDecoration(
   color: Color(0x00FFFFFF),
