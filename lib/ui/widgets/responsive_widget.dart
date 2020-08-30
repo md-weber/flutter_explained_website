@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 const double kDesktopBreakpoint = 1280;
 const double kTabletBreakpoint = 680;
+const double kMobileBreakpoint = 320;
 
 class ResponsiveWidget extends StatelessWidget {
   const ResponsiveWidget({
