@@ -1,3 +1,4 @@
+[![Odysee Badge](https://img.shields.io/static/v1?label=Odysee&message=Invite&color=purple&style=flat-square&logo=odysee&logoColor=purple)](https://odysee.com/$/invite/@flutterexplained:7)
 [![Codemagic build status](https://api.codemagic.io/apps/5f300b8acfa936861241b4b4/5f300b8acfa936861241b4b3/status_badge.svg)](https://codemagic.io/apps/5f300b8acfa936861241b4b4/5f300b8acfa936861241b4b3/latest_build)
 
 # flutter_explained_website
